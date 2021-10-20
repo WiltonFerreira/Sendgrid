@@ -1,5 +1,35 @@
 
+<div class="pc-container">
+    <div class="pcoded-content">
+        <div class="row">
+            <p id="notice"><%= notice %></p>
 
+            <h1>Registros</h1>
+
+            <table>
+            <thead>
+                <tr>
+                <th>Informações</th>
+                <th>Data</th>
+                <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% @eventos.each do |evento| %>
+                <tr>
+                    <td><%= evento.info %></td>
+                    <td><%= evento.created_at %></td>
+                    <td>-</td>
+                </tr>
+                <% end %>
+            </tbody>
+            </table>
+
+            <br>
+            </div>
+    </div>
+</div>
 
 
  <script src="assets/pcoded.min.js"></script>
