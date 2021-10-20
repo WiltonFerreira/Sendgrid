@@ -10,9 +10,49 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+        <!-- Favicon icon -->
+    <link rel="icon" href="assets/favicon.svg" type="image/x-icon">
+
+    <!-- font css -->
+    <link rel="stylesheet" href="assets/feather.css">
+    <link rel="stylesheet" href="assets/fontawesome.css">
+    <link rel="stylesheet" href="assets/material.css">
   </head>
 
-  <body>
+
+<body class="">
+	<!-- [ Pre-loader ] start -->
+	<div class="loader-bg">
+		<div class="loader-track">
+			<div class="loader-fill"></div>
+		</div>
+	</div>
+	<!-- [ Mobile header ] start -->
+	<div class="pc-mob-header pc-header">
+		<div class="pcm-logo">
+			<img src="assets/logo.svg" alt="" class="logo logo-lg">
+		</div>
+		<div class="pcm-toolbar">
+			<a href="#!" class="pc-head-link" id="mobile-collapse">
+				<div class="hamburger hamburger--arrowturn">
+					<div class="hamburger-box">
+						<div class="hamburger-inner"></div>
+					</div>
+				</div>
+			</a>
+			<a href="#!" class="pc-head-link" id="headerdrp-collapse">
+				<i data-feather="align-right"></i>
+			</a>
+			<a href="#!" class="pc-head-link" id="header-collapse">
+				<i data-feather="more-vertical"></i>
+			</a>
+		</div>
+	</div>
+	<!-- [ Mobile header ] End -->
+
+  <%= render 'shared/menu2' %>
+
     <%= yield %>
   </body>
 </html>
