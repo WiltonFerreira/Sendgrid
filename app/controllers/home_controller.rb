@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   def index
-      @eventos = Sent.where(:account => 'cdlparauapebas')
+      perfil = CLIENTE
+      @eventos = Sent.where(account: perfil).order('created_at desc')
+      
   end
 
   def about

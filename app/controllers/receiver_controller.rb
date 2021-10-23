@@ -17,26 +17,30 @@ class ReceiverController < ApplicationController
 
 	def handle_post
 		# Handle Post
-		puts 'request'
-		puts "#{params}  \r\n"
+		#puts 'request'
+		#puts "#{params}  \r\n"
 		if params[:_json] then
 			cliente =  params[:client]
 		end
 
 		if params[:_json] then
 			events = params[:_json]
-						
-			events.each do |linha|
-				registro = Sent.new(:account =>cliente, :info =>linha, :active => true)
+			
+			events.each do |event|
+				
+				registro = Sent.new(:account =>cliente, :info =>event, :active => true)
 				registro.save
-				puts linha.to_json
 			end
+			
+			render json: {
+				:message => :"Post accepted"
+			}
+		else
+			render json: {
+				:message => :error,
+				:error => "Unexpected content-type. Expecting JSON."
+			}, status => 400	
 		end
-	end
-
-
-	def to_string(value)
-		(value.is_a? Array or value.is_a? Hash) ? value.to_json : value
 	end
 
 end

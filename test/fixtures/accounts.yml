@@ -1,21 +1,18 @@
 # == Schema Information
 #
-# Table name: sents
+# Table name: accounts
 #
 #  id         :bigint           not null, primary key
-#  account    :string
 #  active     :boolean
-#  info       :text             default("true")
+#  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 one:
-  account: MyString
-  info: MyText
+  name: MyString
   active: false
 
 two:
-  account: MyString
-  info: MyText
+  name: MyString
   active: false

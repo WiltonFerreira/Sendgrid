@@ -15,13 +15,13 @@
     <link rel="icon" href="assets/favicon.svg" type="image/x-icon">
 
     <!-- font css -->
-    <link rel="stylesheet" href="assets/feather.css">
-    <link rel="stylesheet" href="assets/fontawesome.css">
-    <link rel="stylesheet" href="assets/material.css">
+    <link rel="stylesheet" href="/assets/feather.css">
+    <link rel="stylesheet" href="/assets/fontawesome.css">
+    <link rel="stylesheet" href="/assets/material.css">
   </head>
 
 
-<body class="">
+<body class="container-fluid">
 	<!-- [ Pre-loader ] start -->
 	<div class="loader-bg">
 		<div class="loader-track">
@@ -31,7 +31,7 @@
 	<!-- [ Mobile header ] start -->
 	<div class="pc-mob-header pc-header">
 		<div class="pcm-logo">
-			<img src="assets/logo.png" alt="" class="logo logo-lg">
+			<img src="/assets/logo.png" alt="" class="logo logo-lg">
 		</div>
 		<div class="pcm-toolbar">
 			<a href="#!" class="pc-head-link" id="mobile-collapse">
@@ -50,9 +50,21 @@
 		</div>
 	</div>
 	<!-- [ Mobile header ] End -->
-
   <%= render 'shared/menu2' %>
 
+	<div class="pc-container">
+    	<div class="pcoded-content container-fluid">
+        	<div class="row">
+            	<p id="notice"><%= notice %></p>
+
     <%= yield %>
+
+	        </div>
+    	</div>
+	</div>
   </body>
+ <script src="/assets/pcoded.min.js"></script>
+ <script src="/assets/apexcharts.min.js"></script>
+ <script src="/assets/feather.min.js"></script>
+ 
 </html>

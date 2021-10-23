@@ -5,7 +5,7 @@
 #  id         :bigint           not null, primary key
 #  account    :string
 #  active     :boolean
-#  info       :text
+#  info       :text             default("true")
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

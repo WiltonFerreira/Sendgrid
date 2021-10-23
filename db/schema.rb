@@ -10,14 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_18_135309) do
+ActiveRecord::Schema.define(version: 2021_10_21_020549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "accounts", force: :cascade do |t|
+    t.string "name"
+    t.boolean "active"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.bigint "account_id", null: false
+    t.integer "timestamp"
+    t.text "event"
+    t.text "email"
+    t.text "smtp_id"
+    t.text "sg_event_id"
+    t.text "sg_message_id"
+    t.text "category"
+    t.text "newsletter"
+    t.text "response"
+    t.text "reason"
+    t.string "ip"
+    t.text "useragent"
+    t.text "attempt"
+    t.text "status"
+    t.text "type_id"
+    t.text "url"
+    t.text "additional_arguments"
+    t.integer "event_post_timestamp"
+    t.text "raw"
+    t.integer "asm_group_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["account_id"], name: "index_events_on_account_id"
+  end
+
   create_table "sents", force: :cascade do |t|
     t.string "account"
-    t.text "info"
+    t.text "info", default: "true"
     t.boolean "active"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -35,4 +69,5 @@ ActiveRecord::Schema.define(version: 2021_10_18_135309) do
     t.index ["reset_password_token"], name: "index_usuarios_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "events", "accounts"
 end
