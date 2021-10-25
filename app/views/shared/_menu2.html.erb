@@ -1,20 +1,20 @@
 <!-- [ navigation menu ] start -->
-	<nav class="pc-sidebar ">
-		<div class="navbar-wrapper">
-			<div class="m-header">
-				<a href="/" class="b-brand">
+	<div class="menu" >
+		<nav class="menu" style="background: var(--bs-dark); ">
+			<div class="navbar navbar-nav" style="background-color: #161c25;">
+				<a href="/" class="navbar-nav navbar-brand nav-link">
 					<!-- ========   change your logo hear   ============ -->
 					<img src="/assets/logo.png" alt="" class="logo logo-lg">
-					<img src="/assets/logo-sm.svg" alt="" class="logo logo-sm">
+					<img src="/assets/logo-sm.png" alt="" class="logo logo-sm">
 				</a>
-			</div>
-			<div class="navbar-content scrollbar">
-				<ul class="pc-navbar">
-					<li class="pc-item pc-caption">
+			</div>	
+			<div class="navbar-nav navbar-scroll">
+				<ul class="navbar-nav">
+					<li class="nav-item nav-text">
 						<label>Navegação</label>
 					</li>
-					<li class="pc-item">
-						<a href="/" class="pc-link ">
+					<li class="nav-item">
+						<a href="/" class="nav-link ">
                             <span class="pc-micon">
                                 <i class="material-icons-two-tone">home</i>
                             </span>
@@ -22,11 +22,11 @@
                         </a>
 					</li>
 					
-                    <li class="pc-item pc-caption">
+                    <li class="nav-text">
 						<label>Serviços</label>
 					</li>
-					<li class="pc-item">
-						<a href="#" class="pc-link ">
+					<li class="nav-item">
+						<a href="#" class="nav-link ">
                             <span class="pc-micon">
                                 <i class="material-icons-two-tone">add_alert</i>
                             </span>
@@ -34,20 +34,28 @@
                         </a>
 					</li>
 					
-					<li class="pc-item pc-caption">
-                        <label>Sendgrid</label>
-                    	<span>Vincular com webhook</span>
+					<li class="nav-text">
+                        <label>Administrativo</label>
                     </li>
-                    <li class="pc-item">
-                        <a href="/accounts/" class="pc-link ">
+                    <li class="nav-item">
+                        <a href="/accounts/" class="nav-link ">
                             <span class="pc-micon">
                                 <i class="material-icons-two-tone">email</i>
                             </span>
                             <span class="pc-mtext">Contas Sengrid</span>
                         </a>
 					</li>
+					<li class="nav-item">
+                        <a href="/home/index/" class="nav-link ">
+                            <span class="pc-micon">
+                                <i class="material-icons-two-tone">queue</i>
+                            </span>
+                            <span class="pc-mtext">API - Captura</span>
+                        </a>
+					</li>
+					
 				</ul>
 			</div>
-		</div>
-	</nav>
+		</nav>
+	</div>
 	<!-- [ navigation menu ] end -->
