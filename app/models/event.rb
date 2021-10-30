@@ -22,6 +22,7 @@
 #  updated_at           :datetime         not null
 #  account_id           :bigint           not null
 #  asm_group_id         :integer
+#  sent_id              :bigint           not null
 #  sg_event_id          :text
 #  sg_message_id        :text
 #  smtp_id              :text
@@ -30,7 +31,9 @@
 # Foreign Keys
 #
 #  fk_rails_...  (account_id => accounts.id)
+#  fk_rails_...  (sent_id => sents.id)
 #
 class Event < ApplicationRecord
   belongs_to :account
+  belongs_to :sent
 end

@@ -9,4 +9,5 @@
 #  updated_at :datetime         not null
 #
 class Account < ApplicationRecord
+    has_many :events
 end

@@ -21,15 +21,10 @@ class ReceiverController < ApplicationController
 		#puts "#{params}  \r\n"
 		if params[:_json] then
 			cliente =  params[:client]
-		end
-
-		if params[:_json] then
 			events = params[:_json]
 			
 			events.each do |event|
-				
-				registro = Sent.new(:account =>cliente, :info =>event, :active => true)
-				registro.save
+				DetailWorker.perform_async(cliente, event)
 			end
 			
 			render json: {
