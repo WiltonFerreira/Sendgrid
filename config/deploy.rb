@@ -14,7 +14,7 @@ set :deploy_via, :remote_cache
 set :migration_role, :app
 
 set :rvm_ruby_version, '2.6.6'
-set :bundle_without, %w{test}.join(' ')      # this is default
+set :bundle_without, %w{production test}.join(' ')      # this is default
 
 set :pty, true
 
