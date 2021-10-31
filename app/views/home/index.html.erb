@@ -1,0 +1,25 @@
+
+            <h1>Registros</h1>
+
+            <div class="table-responsive">
+                <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th>Dados</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% @eventos.each do |evento| %>
+                    <tr data-bs-toggle="tooltip" title="<%= evento.account %>">
+                        <td><%= evento.info %></td>
+                        <td><%= evento.created_at %></td>
+                    </tr>
+                    <% end %>
+                </tbody>
+                </table>
+            </div>
+            <br>
+  
+

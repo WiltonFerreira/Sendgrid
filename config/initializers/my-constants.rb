@@ -1,0 +1,1 @@
+CLIENTE = ['tuco'].freeze

@@ -1,0 +1,81 @@
+# == Schema Information
+#
+# Table name: events
+#
+#  id                   :bigint           not null, primary key
+#  additional_arguments :text
+#  attempt              :text
+#  category             :text
+#  email                :text
+#  event                :text
+#  event_post_timestamp :integer
+#  ip                   :string
+#  newsletter           :text
+#  raw                  :text
+#  reason               :text
+#  response             :text
+#  status               :text
+#  timestamp            :integer
+#  url                  :text
+#  useragent            :text
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  account_id           :bigint           not null
+#  asm_group_id         :integer
+#  sent_id              :bigint           not null
+#  sg_event_id          :text
+#  sg_message_id        :text
+#  smtp_id              :text
+#  type_id              :text
+#
+# Foreign Keys
+#
+#  fk_rails_...  (account_id => accounts.id)
+#  fk_rails_...  (sent_id => sents.id)
+#
+
+one:
+  account: one
+  timestamp: 1
+  event: MyText
+  email: MyText
+  smtp-id: MyText
+  sg_event_id: MyText
+  sg_message_id: MyText
+  category: MyText
+  newsletter: MyText
+  response: MyText
+  reason: MyText
+  ip: MyString
+  useragent: MyText
+  attempt: MyText
+  status: MyText
+  type_id: MyText
+  url: MyText
+  additional_arguments: MyText
+  event_post_timestamp: 1
+  raw: MyText
+  asm_group_id: 1
+
+two:
+  account: two
+  timestamp: 1
+  event: MyText
+  email: MyText
+  smtp-id: MyText
+  sg_event_id: MyText
+  sg_message_id: MyText
+  category: MyText
+  newsletter: MyText
+  response: MyText
+  reason: MyText
+  ip: MyString
+  useragent: MyText
+  attempt: MyText
+  status: MyText
+  type_id: MyText
+  url: MyText
+  additional_arguments: MyText
+  event_post_timestamp: 1
+  raw: MyText
+  asm_group_id: 1
