@@ -49,6 +49,14 @@ group :development do
   gem "capistrano-passenger"
   gem "capistrano-yarn"
   gem "capistrano-passenger"
+
+group :development, :test do
+  gem 'rspec-rails', '~> 5.0.0'
+  gem 'shoulda-matchers', '~> 5.0'
+end  
+#  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+#    gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'main'
+#  end
 end
 
 group :test do

@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :name, "Nome:" %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :active %>
+    <%= form.label :active, "Ativo" %>
     <%= form.check_box :active %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Enviar" %>
   </div>
 <% end %>

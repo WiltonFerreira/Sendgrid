@@ -10,4 +10,11 @@
 #
 class Account < ApplicationRecord
     has_many :events
+    validates :name, presence: true, uniqueness: true 
+    after_initialize :set_defaults, unless: :persisted?
+
+    def set_defaults
+        self.active = true if self.active.nil?
+    end
 end
+
