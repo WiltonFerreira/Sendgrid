@@ -11,6 +11,9 @@ import "channels"
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
 import 'jquery'
+import 'datatables.net-bs5'
+
+window.$ = $
 
 Rails.start()
 Turbolinks.start()

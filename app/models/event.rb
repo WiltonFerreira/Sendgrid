@@ -36,4 +36,10 @@
 class Event < ApplicationRecord
   belongs_to :account
   belongs_to :sent
+
+  scope :with_account, -> (account) { 
+    joins(:account).where('accounts.name in (?)',account) 
+  }
+
+  
 end

@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
- @charset "UTF-8";
+@import "bootstrap/dist/css/bootstrap";
+
+@charset "UTF-8";
 :root {
     --bs-blue: #7267EF;
     --bs-indigo: #6610f2;
@@ -64,7 +66,7 @@ body {
 
 .navbar {
     background-color: var(--bs-dark);
-    position: flex;
+    display: flex;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .nav-item {
@@ -133,9 +135,10 @@ body {
     display: inline-block;
 }
 .container {
-    position: absolute;
+    display: flex;
     top: 0px;
-    left: 220px;
+    position: relative;
+    left: 100px;
 }
 
 
